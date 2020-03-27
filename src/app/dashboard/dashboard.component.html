@@ -1,0 +1,110 @@
+<!-- <header>
+  <mat-toolbar color="primary" class="md-tall">
+    <mat-toolbar-row>
+      <p><button mat-button (click)="sidenav.toggle()" class="pl-0">
+          <mat-icon>dehaze</mat-icon>
+        </button></p>
+      <h1>Contract Portal</h1>
+      <span class="spacer"></span>
+      <div class="example-icon user-block">
+        Terms of Service <span class="mr-2 ml-2">|</span>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon class="mr-2">
+            account_circle
+          </mat-icon> User name
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>User Preferences</button>
+          <button mat-menu-item>Account Settings</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+    <mat-list>
+  <mat-list-item *ngFor="let folder of folders">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <h4 mat-line>{{folder.name}}</h4>
+    <p mat-line> {{folder.updated | date}} </p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <h3 mat-subheader>Notes</h3>
+  <mat-list-item *ngFor="let note of notes">
+    <mat-icon mat-list-icon>note</mat-icon>
+    <h4 mat-line>{{note.name}}</h4>
+    <p mat-line> {{note.updated | date}} </p>
+  </mat-list-item>
+</mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <section class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" >
+      
+     
+        <p>hello world</p>
+     
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+<div class="example-container">
+  <mat-toolbar class="example-toolbar">
+    <mat-icon class="mr-2" (click)="isExpanded = !isExpanded">menu</mat-icon> Contract Portal
+    <span class="example-fill-remaining-space"></span>
+    <div class="example-icon user-block">
+      <span class="notifications-icon mr-2">
+        <mat-icon>notifications</mat-icon>
+        <span>5</span>
+      </span>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon class="mr-2">
+          account_circle
+        </mat-icon> User name
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>User Preferences</button>
+        <button mat-menu-item>Account Settings</button>
+        <button mat-menu-item  routerLink = "/login">Logout</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container" autosize>
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+      <mat-nav-list class="dashboard">
+        <a mat-list-item *ngFor="let list of lists">
+          <mat-icon mat-list-icon>{{list.icon}}</mat-icon>
+          <p mat-line *ngIf="isExpanded">{{list.name}}</p>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <div class="example-sidenav-content">
+      <div class="container ml-4 mt-5" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="10">
+        <div class="item item-1 mt-5" fxFlex="65%">
+          <mat-card class="mb-3" style="height:200px">
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-content></mat-card-content>
+          </mat-card>
+          <mat-card class="mb-3" style="height:415px">
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-content></mat-card-content>
+          </mat-card>
+        </div>
+        <div class="item item-2 mt-5" fxFlex="35%" fxFlexOrder="3">
+          <mat-card class="mb-3" style="height:200px">
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-content></mat-card-content>
+          </mat-card>
+          <mat-card class="mb-3" style="height:200px">
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-content></mat-card-content>
+          </mat-card>
+          <mat-card class="mb-3" style="height:200px">
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-content></mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-container>
+</div>

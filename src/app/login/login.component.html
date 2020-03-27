@@ -1,0 +1,48 @@
+<div class="bg-light">
+<header>
+  <mat-toolbar color="primary" class="md-tall">
+    <mat-toolbar-row>
+      <h1>{{title}} <span>{{subtitle}}</span></h1>
+      <span class="spacer"></span>
+      <div class="example-icon">Terms of Service <span class="mr-2 ml-2">|</span> Privacy Policy</div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+<div class="login-block">
+  <mat-card>
+    <div class="pt-4 mb-5">
+      <mat-card-title class="text-center">{{welcome}}</mat-card-title>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <mat-card-content class="mr-5 ml-5 login-block-container">
+        <div class="mb-3">
+          <input type="text" placeholder="User / Email" formControlName="email" class="form-control p-3" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }" />
+          <div *ngIf="submitted &amp;&amp; registerForm.controls.email.errors" class="text-danger">
+            <div *ngIf="registerForm.controls.email.errors.required">Email is required</div>
+            <div *ngIf="registerForm.controls.email.errors.email">Email must be a valid email address</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Password" formControlName="password" class="form-control p-3" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.password.errors }" />
+          <div *ngIf="submitted &amp;&amp; registerForm.controls.password.errors" class="text-danger">
+            <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+            <div *ngIf="registerForm.controls.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        </div>
+        <mat-toolbar-row>
+          <section>
+            <mat-checkbox class="example-margin">Stay signed in</mat-checkbox>
+          </section>
+          <span></span>
+          <span class="spacer"> </span>
+          <a href="#" class="con">Forgot your password</a>
+        </mat-toolbar-row>
+        <button mat-raised-button color="primary">Log In</button>
+        <div class="text-center mt-4 mb-5">Don't have an account? <a routerLink = "/createuser" href="#" class="con">Sign Up</a></div>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>
+</div>
+
+

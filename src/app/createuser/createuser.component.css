@@ -1,0 +1,23 @@
+.create-user-block {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    color: #4c4c4c;
+}
+.create-user-block h2{
+	color: #4c4c4c;
+}
+
+.create-user-block input {
+    padding: 4px;
+}
+
+.create-user-block textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.create-user-block .mat-raised-button.mat-primary{
+	background-color: #65b9e1;
+	padding: 3px 32px;
+}

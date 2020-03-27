@@ -1,0 +1,107 @@
+html{
+	padding-top: 185px;
+}
+.mat-toolbar.mat-primary {
+  background: #2a3a4a;
+  color: #fff;
+}
+
+.user-block .mat-button {
+  font-size: 20px;
+}
+
+.mat-menu-item {
+  height: 32px;
+  line-height: 32px;
+}
+
+.mat-menu-item:hover {
+  background-color: #3dbcf3;
+  color: #ffffff;
+}
+
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  max-width: 1100px;
+}
+
+h1 {
+  color: white;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-sidenav {
+  color: #d36423;
+}
+
+.mat-list-item {
+  color: #d8d8d8;
+}
+
+.mat-drawer {
+  background: #485d72;
+}
+
+.mat-toolbar {
+  background: #2a3a4a;
+  color: white;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.example-toolbar {
+  z-index: 2;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.list-horizontal .mat-list-item {
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+.notifications-icon .mat-icon {
+  position: relative;
+  top: 4px;
+}
+
+.notifications-icon {
+  position: relative;
+}
+
+.notifications-icon .mat-icon~span {
+  position: absolute;
+  top: -8px;
+  font-size: 12px;
+  background: #3ebdf4;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  left: 12px;
+}

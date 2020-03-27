@@ -1,0 +1,74 @@
+.bg-light{
+  background-color: #ebebeb;
+}
+mat-grid-tile {
+  background: lightblue;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+
+.mat-toolbar.mat-primary {
+    background: #485d72;
+    color: #fff;
+}
+.md-tall.mat-toolbar-multiple-rows {
+    padding: 1.5rem 0
+}
+header h1 {
+    font-size: 42px !important;
+    font-weight: normal !important;
+}
+header h1 span {
+    color: #3abaf5;
+}
+.login-block{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-block .mat-card {
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #3b3b3b;
+    padding-bottom: 50px;
+}
+
+.login-block-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-block-container > * {
+  width: 100%;
+}
+
+.login-block .mat-toolbar-row{
+	padding: 0;
+}
+
+.login-block-container .mat-raised-button.mat-primary {
+	background-color: #3dbaf4;
+    max-width: 160px !important;
+    margin: 0 auto;
+}
+
+.mat-card-title {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.login-block-container .form-control{
+	width: 100%;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    padding-left: 30px;
+}
+
+.text-danger{
+	color: red
+}
